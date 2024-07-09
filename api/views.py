@@ -22,3 +22,5 @@ def get_urls(request):
         urls = URL.objects.filter(status='pending').order_by('-priority')
     serializer = URLSerializer(urls, many=True)
     return Response(serializer.data)
+
+
